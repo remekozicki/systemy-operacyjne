@@ -1,7 +1,9 @@
 
-#include <stdio.h>
+#include<stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include<sys/wait.h>
+#include <stdlib.h>
 
 int main(int argc, char ** argv) {
 
@@ -10,25 +12,26 @@ int main(int argc, char ** argv) {
         return 1;
     }
 
-    pid_t child_pid;
-    printf("PID glownego programu: %d\n", (int)getpid());
-
-    int counter = argv[0][1];
-    printf("%d",counter);
-
-
+    int child_pid;
+    int original_pid = (int)getpid();
+    printf("PID glownego programu: %d\n", original_pid);
+    int counter = atoi(argv[1]);
     for (int i = 0; i < counter; ++i) {
+        child_pid = -1;
 
-        if(child_pid!=0) {
-            printf("Proces rodzica: Proces rodzica ma pid:%d\n", (int)getpid());
-            printf("Proces rodzica: Proces dziecka ma pid:%d\n", (int)child_pid);
-        } else {
-            printf("Proces dziecka: Proces rodzica ma pid:%d\n",(int)getppid());
-            printf("Proces dziecka: Proces dziecka ma pid:%d\n",(int)getpid());
+        if ((int)getpid() == original_pid){
+            child_pid = fork();
         }
-
+        if (child_pid == 0){
+            printf("Proces rodzica ma pid:%d\n", (int)getppid());
+            printf("Proces dziecka ma pid:%d\n", (int)getpid());
+        }
     }
+    while (wait(NULL) > 0);
+    if ((int)getpid() == original_pid){
 
+        printf("Proces macierzysty argv[1]:%s\n",argv[1]);
+    }
 
     return 0;
 }
