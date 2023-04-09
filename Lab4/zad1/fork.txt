@@ -1,0 +1,18 @@
+ignore (./main ignore parent fork):
+pid:3255 signal rised
+pid:3256 signal rised
+
+handler (./main handler parent fork):
+pid:3324 signal rised
+pid:3324 sygnal
+pid:3325 signal rised
+pid:3325 sygnal
+
+mask (./main mask parent fork):
+pid:4489 signal rised
+pid:4490 signal rised
+
+pending (./main pending parent fork):
+pid:3952 signal rised
+pid:3952 signal pending
+pid:3953 signal not pending

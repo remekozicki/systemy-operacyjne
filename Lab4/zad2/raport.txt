@@ -1,0 +1,26 @@
+test1:
+self:
+singal: 10
+PID: 5717
+exit value or signal: 0
+Number of attempted system call: 0
+Real user ID: 1000
+
+child:
+singal: 10
+PID: 5718
+exit value or signal: 0
+Number of attempted system call: 0
+Real user ID: 1000
+
+Custom:
+singal: 10
+PID: 5717
+exit value or signal: a
+Number of attempted system call: 10
+Real user ID: 1000
+
+test2:
+test3:
+child terminated
+^C (przerwanie procesu)

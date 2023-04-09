@@ -1,0 +1,7 @@
+przykłądowe wejście:
+./sender 6428 1
+
+wyjście:
+6428:
+signal send
+sygnal przyszedl

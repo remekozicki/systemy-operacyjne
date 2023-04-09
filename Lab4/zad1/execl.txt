@@ -1,0 +1,18 @@
+ignore (./main ignore parent execl):
+pid:4497 signal rised
+pid:4497 signal rised
+
+handler (./main handler parent execl):
+pid:4501 signal rised
+pid:4501 sygnal
+pid:4501 signal rised
+pid:4501 sygnal
+
+mask (./main mask parent execl):
+pid:4504 signal rised
+
+pending (./main pending parent execl):
+pid:4506 signal rised
+pid:4506 signal pending
+pid:4506 signal pending
+

@@ -57,6 +57,7 @@ int main(int argc, char ** argv){
             }
             fclose(file);
         }
+        free(dest_path);
     }
     while (wait(NULL) > 0);
 
