@@ -42,12 +42,12 @@ int main(void)
         char haircut = queue_pop(queue);
         release(buffer_mutex);
 
-        printf("\t[BARBER-%d] Processing hairuct no. %d\n", getpid(), haircut);
+        printf("\t[BARBER-%d] Haircut number:  %d  in process...\n", getpid(), haircut);
         fflush(stdout);
 
         usleep(HAIRCUT_TIME);
 
-        printf("\t[BARBER-%d] Done with hairuct no. %d\n", getpid(), haircut);
+        printf("\t[BARBER-%d] Done with haircut number: %d\n", getpid(), haircut);
         fflush(stdout);
 
         release(sem_chairs);

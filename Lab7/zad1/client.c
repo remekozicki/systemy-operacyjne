@@ -38,7 +38,7 @@ int main(void) {
 
     aquire(buffer_mutex);
     char haircut = random_haircut();
-    printf("\t[CLIENT-%d] New client with haircut no. %d \n", getpid(), haircut);
+    printf("\t[CLIENT-%d] Client with haircut number: %d \n", getpid(), haircut);
     fflush(stdout);
     queue_push(queue, haircut);
     release(buffer_mutex);
@@ -46,7 +46,7 @@ int main(void) {
     release(sem_barbers);
     aquire(sem_chairs);
 
-    printf("\t[CLIENT-%d] Client done.\n", getpid());
+    printf("\t[CLIENT-%d] Haircut done.\n", getpid());
     fflush(stdout);
 
     detach_memory(queue);

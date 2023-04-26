@@ -12,7 +12,7 @@
 
 #ifdef SYSTEM_V
 #define BARBER_EXEC "./barber_SYSTEM_V"
-    #define CLIENT_EXEC "./client_SYSTEM_V"
+#define CLIENT_EXEC "./client_SYSTEM_V"
 #endif
 
 static Semaphore sem_queue;
@@ -44,24 +44,24 @@ int main(void) {
     for(int i=0;i<BARBER_TOTAL;++i)
         if (fork() == 0)
             execl(BARBER_EXEC, BARBER_EXEC, NULL);
-    printf("[SIMULATION] Spawned all barbers.\n");
+    printf("[SIMULATION] Barbers.\n");
     fflush(stdout);
 
 
     for(int i=0;i<CUSTOMERS_TOTAL;++i)
         if (fork() == 0)
             execl(CLIENT_EXEC, CLIENT_EXEC, NULL);
-    printf("[SIMULATION] Spawned all customers.\n");
+    printf("[SIMULATION] Customers.\n");
     fflush(stdout);
 
     while(wait(NULL) > 0);
 
     if (!destroy_memory(PROJECT_IDENTIFIER)) {
-        fprintf(stderr, "[ERROR] Failed to release shared memory.\n");
+        fprintf(stderr, "[ERROR] Failed to release memory.\n");
         exit(EXIT_FAILURE);
     }
     close_semaphores();
-    printf("[SIMULATION] Simulation finished.\n");
+    printf("[SIMULATION] Simulation ended.\n");
     fflush(stdout);
     return EXIT_SUCCESS;
 }
