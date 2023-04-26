@@ -1,0 +1,38 @@
+
+input: ./simulation_SYSTEM_V
+
+output:
+[SIMULATION] barbers total: 3, chairs total: 2, queue size: 5, customers waiting: 6
+[SIMULATION] Barbers.
+        [BARBER-12552] Spawned
+        [BARBER-12551] Spawned
+        [BARBER-12553] Spawned
+[SIMULATION] Customers.
+        [CLIENT-12554] Client with haircut number: 100
+        [CLIENT-12555] Client with haircut number: 95
+        [BARBER-12552] Hairuct number:  100  in process...
+        [BARBER-12551] Hairuct number:  95  in process...
+        [BARBER-12552] Done with hairuct number: 100
+        [BARBER-12551] Done with hairuct number: 95
+        [CLIENT-12554] Haircut done.
+        [CLIENT-12556] Client with haircut number: 112
+        [CLIENT-12555] Haircut done.
+        [CLIENT-12557] Client with haircut number: 57
+        [BARBER-12553] Hairuct number:  112  in process...
+        [BARBER-12553] Done with hairuct number: 112
+        [BARBER-12553] Hairuct number:  57  in process...
+        [CLIENT-12559] Client with haircut number: 19
+        [CLIENT-12556] Haircut done.
+        [BARBER-12553] Done with hairuct number: 57
+        [BARBER-12553] Hairuct number:  19  in process...
+        [CLIENT-12557] Haircut done.
+        [CLIENT-12558] Client with haircut number: 114
+        [BARBER-12553] Done with hairuct number: 19
+        [BARBER-12553] Hairuct number:  114  in process...
+        [CLIENT-12559] Haircut done.
+        [BARBER-12553] Done with hairuct number: 114
+        [CLIENT-12558] Haircut done.
+        [BARBER-12552] Queue empty. Closing.
+        [BARBER-12551] Queue empty. Closing.
+        [BARBER-12553] Queue empty. Closing.
+[SIMULATION] Simulation ended.

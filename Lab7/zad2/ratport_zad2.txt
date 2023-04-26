@@ -1,0 +1,37 @@
+input: ./simulation_POSIX
+
+output:
+[SIMULATION] barbers total: 3, chairs total: 2, queue size: 5, customers waiting: 6
+[SIMULATION] Barbers.
+        [BARBER-17901] Spawned
+        [BARBER-17900] Spawned
+[SIMULATION] Customers.
+        [BARBER-17902] Spawned
+        [CLIENT-17903] Client with haircut number: 62
+        [CLIENT-17904] Client with haircut number: 119
+        [BARBER-17900] Haircut number:  62  in process...
+        [BARBER-17901] Haircut number:  119  in process...
+        [BARBER-17901] Done with haircut number: 119
+        [BARBER-17900] Done with haircut number: 62
+        [CLIENT-17904] Haircut done.
+        [CLIENT-17903] Haircut done.
+        [CLIENT-17905] Client with haircut number: 32
+        [CLIENT-17907] Client with haircut number: 112
+        [BARBER-17902] Haircut number:  32  in process...
+        [BARBER-17902] Done with haircut number: 32
+        [BARBER-17902] Haircut number:  112  in process...
+        [CLIENT-17905] Haircut done.
+        [CLIENT-17906] Client with haircut number: 38
+        [BARBER-17902] Done with haircut number: 112
+        [CLIENT-17907] Haircut done.
+        [BARBER-17902] Haircut number:  38  in process...
+        [CLIENT-17908] Client with haircut number: 61
+        [BARBER-17902] Done with haircut number: 38
+        [BARBER-17902] Haircut number:  61  in process...
+        [CLIENT-17906] Haircut done.
+        [BARBER-17902] Done with haircut number: 61
+        [CLIENT-17908] Haircut done.
+        [BARBER-17901] Queue empty. Closing.
+        [BARBER-17900] Queue empty. Closing.
+        [BARBER-17902] Queue empty. Closing.
+[SIMULATION] Simulation ended.
